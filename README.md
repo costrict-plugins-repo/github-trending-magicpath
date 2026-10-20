@@ -1,0 +1,51 @@
+# MagicPath Agent Skills
+
+Agent Skills for MagicPath, packaged for the open Agent Skills ecosystem and installable with Vercel's `skills` CLI or as a Claude Code, Codex, or Cursor plugin.
+
+## Install in Cursor
+
+In Cursor, install the plugin from the [Cursor marketplace](https://cursor.com/marketplace/magicpath), or run the following from inside a Cursor session:
+
+```text
+/add-plugin magicpath
+```
+
+## Install in Claude Code
+
+In Claude Code, add this repo as a marketplace and install the plugin:
+
+```text
+/plugin marketplace add MagicPathAI/agent-skills
+/plugin install magicpath@magicpath
+```
+
+## Install in Codex
+
+In Codex (CLI, app, or VS Code extension), add this repo as a marketplace and install the plugin:
+
+```text
+codex plugin marketplace add MagicPathAI/agent-skills
+codex plugin add magicpath@magicpath
+```
+
+## Install via the Agent Skills CLI
+
+```bash
+npx skills add https://github.com/MagicPathAI/agent-skills
+```
+
+List available skills without installing:
+
+```bash
+npx skills add https://github.com/MagicPathAI/agent-skills --list
+```
+
+## Available Skills
+
+### `magicpath`
+
+Search, preview, inspect, install, export, create, and edit MagicPath UI components with the `magicpath-ai` CLI. The skill also teaches agents how to preserve 1:1 fidelity when moving a MagicPath design into local code and how to manage MagicPath-hosted skills through `magicpath-ai skills ...`.
+
+Use this when the user mentions MagicPath, wants to find or preview a component, export one to a folder, add or faithfully adapt one in local code, create/edit a canvas component, or create/retrieve/update/import/delete a MagicPath skill.
+
+This skill is the canonical source of truth — both `npx skills add` and `magicpath-ai setup-skills` install from this repo.
